@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brett Gifford – Receipt Portfolio</title>
+
+<!-- Injected social + favicon -->
+<link rel="icon" type="image/png" href="B-favicon.png">
+<meta property="og:title" content="Brett Gifford – Creator / Director / Builder">
+<meta property="og:description" content="Creative direction, product films, and brand systems.">
+<meta property="og:image" content="BrettGifford-Social.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brett Gifford – Creator / Director / Builder">
+<meta name="twitter:image" content="BrettGifford-Social.png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  :root { --paper:#fffdfa; --ink:#000; --highlight:#ffeb3b; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family:"Courier New", monospace;
+    height:100vh;
+    width:100vw;
+    padding:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e3e3e3;
+    overflow:hidden;
+    position:relative;
+  }
+
+  #bgvideo {
+    position:fixed;
+    top:50%; left:50%;
+    min-width:100%; min-height:100%;
+    transform:translate(-50%, -50%) scale(1.1);
+    z-index:-1;
+    object-fit:cover;
+    opacity:0.25;
+    filter:blur(6px) contrast(1.15) saturate(1.1);
+  }
+
+  .scale-wrapper {
+    transform: scale(1.5) rotate(-1.2deg);
+    transform-origin:center;
+  }
+
+  @media (max-width: 600px) {
+    body { padding:12px; align-items:flex-start; }
+    .scale-wrapper { transform: scale(1) rotate(0deg); }
+  }
+
+  .receipt {
+    width:100%; max-width:420px;
+    background:var(--paper);
+    border:1px dashed var(--ink);
+    padding:22px; padding-top:48px;
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+    position:relative;
+  }
+
+  .torn-overlay {
+    position:absolute;
+    top:-38px; left:0;
+    width:100%; height:60px;
+    background:url('https://image.ibb.co/b49eUb/dechirure.png') no-repeat top center;
+    background-size:100% auto;
+    pointer-events:none;
+    z-index:5;
+  }
+
+  .name {
+    text-align:center;
+    font-weight:700;
+    font-size:1.35rem;
+    text-transform:uppercase;
+    margin-bottom:8px;
+    letter-spacing:0.05em;
+  }
+
+  .tags { display:flex; justify-content:center; gap:6px; margin-bottom:12px; }
+  .tag {
+    background:#000; color:#fff;
+    font-size:.62rem; letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    transform:rotate(-1deg);
+  }
+
+  .highlight-block {
+    background:var(--highlight); padding:0 4px;
+    display:inline-block; transform:rotate(-1deg);
+  }
+
+  .divider { border-top:1px dashed #333; margin:12px 0; }
+  .line { font-size:.88rem; margin:8px 0; line-height:1.42; }
+
+  .redacted {
+    background:#000; color:#000;
+    padding:0 6px; border-radius:2px; position:relative;
+  }
+  .redacted::after {
+    content:""; position:absolute; left:2px; right:2px; top:50%;
+    height:1px; background:#111; opacity:.6;
+  }
+
+  .reel { margin-top:10px; text-transform:uppercase; font-size:.78rem; }
+  .reel span { float:right; }
+
+  .meta { margin-top:6px; font-size:.7rem; text-transform:uppercase; }
+  .meta span { float:right; }
+
+  .social-row {
+    margin-top:10px; display:flex; justify-content:center; gap:10px;
+  }
+  .social-icon {
+    width:22px; height:22px;
+    border-radius:50%;
+    border:1px solid #000;
+    display:flex; justify-content:center; align-items:center;
+    font-size:.65rem; text-decoration:none; color:#000;
+  }
+
+  .barcode { margin-top:18px; text-align:center; }
+  .barcode-lines {
+    height:40px;
+    background-image:repeating-linear-gradient(to right,#000 0,#000 2px,transparent2px,transparent6px);
+  }
+  .barcode-text {
+    margin-top:4px; font-size:.55rem; letter-spacing:.18em; color:#666;
+  }
+
+  a { color:#000; border-bottom:1px dotted #444; text-decoration:none; }
+  a:hover { border-bottom-style:solid; }
+</style>
+</head>
+
+<body>
+
+<video id="bgvideo" autoplay muted loop playsinline>
+  <source src="Brett Gifford Showreel 2025 (online-video-cutter.com).mp4" type="video/mp4">
+</video>
+
+<div class="scale-wrapper">
+<div class="receipt">
+
+  <div class="torn-overlay"></div>
+
+  <div class="name"><span class="highlight-block">Brett&nbsp;Gifford</span></div>
+
+  <div class="tags">
+    <span class="tag">Creator</span>
+    <span class="tag">Director</span>
+    <span class="tag">Builder</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="line">
+    Built creative at teams later acquired by
+    <span class="highlight-block"><a href="https://www.optimizely.com">Optimizely</a></span> (via Zaius)
+    and <span class="highlight-block"><a href="https://www.paddle.com">Paddle</a></span> 🦄 (via ProfitWell) — now shaping video art direction at Paddle.
+  </div>
+
+  <div class="line">
+    Former instructor at <span class="highlight-block"><a href="https://www.snhu.edu">SNHU</a></span>.
+    <img src="https://news.ycombinator.com/y18.svg" style="width:14px; height:14px; vertical-align:middle; margin:0 2px;"> applicant.
+    Currently focused on raising my newborn, ❤️ Maya Gifford, and <span class="redacted">thinking of the future of creative systems.</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reel">Showreel 🎥 <span><a href="https://www.youtube.com/watch?v=0mzlRHD0Q8k">Watch</a></span></div>
+
+  <div class="meta">Printed <span id="printTime">—</span></div>
+  <div class="meta">Contact <span><a href="mailto:brettmgifford@gmail.com">brettmgifford@gmail.com</a></span></div>
+  <div class="meta">Portfolio <span><a href="https://www.youtube.com/@brett.gifford">YouTube</a></span></div>
+
+  <div class="social-row">
+    <a class="social-icon" href="https://www.linkedin.com/in/brettmgifford/" target="_blank">in</a>
+    <a class="social-icon" href="https://www.youtube.com/@brett.gifford" target="_blank">▶</a>
+    <a class="social-icon" href="https://www.instagram.com/bgiff1010/" target="_blank">♡</a>
+    <a class="social-icon" href="https://www.facebook.com/brett.gifford.75" target="_blank">f</a>
+    <a class="social-icon" href="mailto:brettmgifford@gmail.com">@</a>
+  </div>
+
+  <div class="barcode">
+    <div class="barcode-lines"></div>
+    <div class="barcode-text">BG / ARCHIVE 2025</div>
+  </div>
+
+</div>
+</div>
+
+<script>
+document.getElementById("printTime").textContent =
+  new Date().toLocaleString(undefined, {
+    year:"numeric", month:"short", day:"2-digit",
+    hour:"2-digit", minute:"2-digit"
+  });
+</script>
+
+</body>
+</html>
