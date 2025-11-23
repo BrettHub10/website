@@ -4,15 +4,24 @@
 <meta charset="UTF-8">
 <title>Brett Gifford — Creator / Director / Builder</title>
 
-<!-- Injected social + favicon -->
+<!-- Favicon -->
 <link rel="icon" type="image/png" href="assets/B-favicon.png">
+
+<!-- SEO description -->
+<meta name="description" content="Creative direction, product films, and brand systems for SaaS and product companies.">
+
+<!-- Open Graph / social -->
 <meta property="og:title" content="Brett Gifford – Creator / Director / Builder">
-<meta property="og:description" content="Creative direction, product films, and brand systems.">
-<meta property="og:image" content="assets/BrettGifford-Social.png">
+<meta property="og:description" content="Creative director and founder building modern visual systems for brands, startups, and emerging technology.">
+<meta property="og:image" content="https://brettgifford.com/assets/BrettGifford-Social.png">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://brettgifford.com">
+
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Brett Gifford – Creator / Director / Builder">
-<meta name="twitter:image" content="assets/BrettGifford-Social.png">
+<meta name="twitter:description" content="Creative director and founder building modern visual systems for brands, startups, and emerging technology.">
+<meta name="twitter:image" content="https://brettgifford.com/assets/BrettGifford-Social.png">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -82,59 +91,147 @@
     letter-spacing:0.05em;
   }
 
-  .tags { display:flex; justify-content:center; gap:6px; margin-bottom:12px; }
+  .tags {
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    margin-bottom:12px;
+  }
+
   .tag {
-    background:#000; color:#fff;
-    font-size:.62rem; letter-spacing:.14em;
+    background:#000;
+    color:#fff;
+    font-size:.62rem;
+    letter-spacing:.14em;
     text-transform:uppercase;
     padding:3px 8px;
     transform:rotate(-1deg);
   }
 
   .highlight-block {
-    background:var(--highlight); padding:0 4px;
-    display:inline-block; transform:rotate(-1deg);
+    background:var(--highlight);
+    padding:0 4px;
+    display:inline-block;
+    transform:rotate(-1deg);
   }
 
   .divider { border-top:1px dashed #333; margin:12px 0; }
   .line { font-size:.88rem; margin:8px 0; line-height:1.42; }
 
   .redacted {
-    background:#000; color:#000;
-    padding:0 6px; border-radius:2px; position:relative;
+    background:#000;
+    color:#000;
+    padding:0 6px;
+    border-radius:2px;
+    position:relative;
   }
   .redacted::after {
-    content:""; position:absolute; left:2px; right:2px; top:50%;
-    height:1px; background:#111; opacity:.6;
+    content:"";
+    position:absolute;
+    left:2px; right:2px; top:50%;
+    height:1px;
+    background:#111;
+    opacity:.6;
   }
 
-  .reel { margin-top:10px; text-transform:uppercase; font-size:.78rem; }
+  .reel {
+    margin-top:10px;
+    text-transform:uppercase;
+    font-size:.78rem;
+  }
   .reel span { float:right; }
 
-  .meta { margin-top:6px; font-size:.7rem; text-transform:uppercase; }
+  .meta {
+    margin-top:6px;
+    font-size:.7rem;
+    text-transform:uppercase;
+  }
   .meta span { float:right; }
 
   .social-row {
-    margin-top:10px; display:flex; justify-content:center; gap:10px;
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
   }
   .social-icon {
     width:22px; height:22px;
     border-radius:50%;
     border:1px solid #000;
-    display:flex; justify-content:center; align-items:center;
-    font-size:.65rem; text-decoration:none; color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:.65rem;
+    text-decoration:none;
+    color:#000;
   }
 
-  .barcode { margin-top:18px; text-align:center; }
+  /* Logo marquee */
+  .logo-marquee {
+    margin-top:14px;
+    padding-top:8px;
+    border-top:1px dashed #333;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+
+  .logo-marquee-label {
+    font-size:.65rem;
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    margin-bottom:4px;
+    color:#555;
+  }
+
+  .logo-track {
+    display:inline-flex;
+    gap:18px;
+    animation: marquee-scroll 22s linear infinite;
+  }
+
+  .logo-pill {
+    border:1px solid #000;
+    border-radius:999px;
+    padding:4px 12px;
+    font-size:.7rem;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    background:#fffdfa;
+  }
+
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .barcode {
+    margin-top:18px;
+    text-align:center;
+  }
+
   .barcode-lines {
     height:40px;
-    background-image:repeating-linear-gradient(to right,#000 0,#000 2px,transparent2px,transparent6px);
-  }
-  .barcode-text {
-    margin-top:4px; font-size:.55rem; letter-spacing:.18em; color:#666;
+    background-image:repeating-linear-gradient(
+      to right,
+      #000 0,
+      #000 2px,
+      transparent 2px,
+      transparent 6px
+    );
   }
 
-  a { color:#000; border-bottom:1px dotted #444; text-decoration:none; }
+  .barcode-text {
+    margin-top:4px;
+    font-size:.55rem;
+    letter-spacing:.18em;
+    color:#666;
+  }
+
+  a {
+    color:#000;
+    border-bottom:1px dotted #444;
+    text-decoration:none;
+  }
   a:hover { border-bottom-style:solid; }
 </style>
 </head>
@@ -145,7 +242,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-9TBEH69VSQ');
 </script>
 
@@ -156,62 +252,100 @@
 </video>
 
 <div class="scale-wrapper">
-<div class="receipt">
+  <div class="receipt">
 
-  <div class="torn-overlay"></div>
+    <div class="torn-overlay"></div>
 
-  <div class="name"><span class="highlight-block">Brett&nbsp;Gifford</span></div>
+    <div class="name">
+      <span class="highlight-block">Brett&nbsp;Gifford</span>
+    </div>
 
-  <div class="tags">
-    <span class="tag">Creator</span>
-    <span class="tag">Director</span>
-    <span class="tag">Builder</span>
-  </div>
+    <div class="tags">
+      <span class="tag">Creator</span>
+      <span class="tag">Director</span>
+      <span class="tag">Builder</span>
+    </div>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
 
-  <div class="line">
-    Built creative at teams later acquired by
-    <span class="highlight-block"><a href="https://www.optimizely.com">Optimizely</a></span> (via Zaius)
-    and <span class="highlight-block"><a href="https://www.paddle.com">Paddle</a></span> 🦄 (via ProfitWell), shaping video-driven creative systems and direction.
-  </div>
+    <div class="line">
+      Built creative at teams later acquired by
+      <span class="highlight-block">
+        <a href="https://www.optimizely.com" target="_blank" rel="noopener noreferrer">Optimizely</a>
+      </span> (via Zaius)
+      and <span class="highlight-block">
+        <a href="https://www.paddle.com" target="_blank" rel="noopener noreferrer">Paddle</a>
+      </span> 🦄 (via ProfitWell), shaping video-driven creative systems and direction.
+    </div>
 
-  <div class="line">
+    <div class="line">
     Founder of <span class="highlight-block"><a href="https://intakely.app">Intakely.</a></span> Former instructor at <span class="highlight-block"><a href="https://www.snhu.edu">SNHU</a></span>.
     <img src="https://news.ycombinator.com/y18.svg" style="width:14px; height:14px; vertical-align:middle; margin:0 2px;"> applicant.
-    Currently focused on raising my newborn, ❤️ Maya Gifford, and thinking of the future of creative systems.</span>
+    Currently focused on raising my newborn, ❤️ Maya Gifford, and thinking of the future of creative systems.
   </div>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
 
-  <div class="reel">Showreel 🎥 <span><a href="https://www.youtube.com/watch?v=0mzlRHD0Q8k">Watch</a></span></div>
+    <div class="reel">
+      Showreel 🎥
+      <span>
+        <a href="https://www.youtube.com/watch?v=0mzlRHD0Q8k" target="_blank" rel="noopener noreferrer">
+          Watch
+        </a>
+      </span>
+    </div>
 
-  <div class="meta">Printed <span id="printTime">—</span></div>
-  <div class="meta">Contact <span><a href="mailto:brettmgifford@gmail.com">brettmgifford@gmail.com</a></span></div>
-  <div class="meta">Portfolio <span><a href="https://www.youtube.com/@brett.gifford">YouTube</a></span></div>
+    <div class="meta">
+      Printed <span id="printTime">—</span>
+    </div>
+    <div class="meta">
+      Contact <span><a href="mailto:brettmgifford@gmail.com">brettmgifford@gmail.com</a></span>
+    </div>
+    <div class="meta">
+      Portfolio <span><a href="https://www.youtube.com/@brett.gifford" target="_blank" rel="noopener noreferrer">YouTube</a></span>
+    </div>
 
-  <div class="social-row">
-    <a class="social-icon" href="https://www.linkedin.com/in/brettmgifford/" target="_blank">in</a>
-    <a class="social-icon" href="https://www.youtube.com/@brett.gifford" target="_blank">▶</a>
-    <a class="social-icon" href="https://www.instagram.com/bgiff1010/" target="_blank">♡</a>
-    <a class="social-icon" href="https://www.facebook.com/brett.gifford.75" target="_blank">f</a>
-    <a class="social-icon" href="mailto:brettmgifford@gmail.com">@</a>
+    <div class="social-row">
+      <a class="social-icon" href="https://www.linkedin.com/in/brettmgifford/" target="_blank" rel="noopener noreferrer">in</a>
+      <a class="social-icon" href="https://www.youtube.com/@brett.gifford" target="_blank" rel="noopener noreferrer">▶</a>
+      <a class="social-icon" href="https://www.instagram.com/bgiff1010/" target="_blank" rel="noopener noreferrer">♡</a>
+      <a class="social-icon" href="https://www.facebook.com/brett.gifford.75" target="_blank" rel="noopener noreferrer">f</a>
+      <a class="social-icon" href="mailto:brettmgifford@gmail.com">@</a>
+    </div>
+
+    <!-- Logo marquee -->
+    <div class="logo-marquee">
+      <div class="logo-marquee-label">Brands I've worked with</div>
+      <div class="logo-track">
+        <div class="logo-pill">Paddle</div>
+        <div class="logo-pill">ProfitWell</div>
+        <div class="logo-pill">Philips</div>
+		<div class="logo-pill">Comcast</div>
+        <div class="logo-pill">Zaius</div>
+        <div class="logo-pill">Appcues</div>
+        <div class="logo-pill">SNHU</div>
+
+        <!-- duplicate for seamless loop -->
+        <div class="logo-pill">Paddle</div>
+        <div class="logo-pill">ProfitWell</div>
+        <div class="logo-pill">Philips</div>
+		<div class="logo-pill">Comcast</div>
+        <div class="logo-pill">Zaius</div>
+        <div class="logo-pill">Appcues</div>
+        <div class="logo-pill">SNHU</div>
+      </div>
+    </div>
+
+
   </div>
-
-  <div class="barcode">
-    <div class="barcode-lines"></div>
-    <div class="barcode-text">BG / ARCHIVE 2025</div>
-  </div>
-
-</div>
 </div>
 
 <script>
-document.getElementById("printTime").textContent =
-  new Date().toLocaleString(undefined, {
-    year:"numeric", month:"short", day:"2-digit",
-    hour:"2-digit", minute:"2-digit"
-  });
+  document.getElementById("printTime").textContent =
+    new Date().toLocaleString(undefined, {
+      year:"numeric", month:"short", day:"2-digit",
+      hour:"2-digit", minute:"2-digit"
+    });
 </script>
 
 </body>
