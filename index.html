@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,11 +7,11 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="assets/B-favicon.png">
 
-<!-- SEO description -->
+<!-- SEO -->
 <meta name="description" content="Creative director and founder building modern visual systems, storytelling, and creative ops tools for ambitious teams.">
 
-<!-- Open Graph / social -->
-<meta property="og:title" content="Brett Gifford – Creator / Director / Builder">
+<!-- Open Graph -->
+<meta property="og:title" content="Brett Gifford — Creator / Director / Builder">
 <meta property="og:description" content="Creative director and founder building modern visual systems, storytelling, and creative ops tools for ambitious teams.">
 <meta property="og:image" content="https://brettgifford.com/assets/BrettGifford-Social.png">
 <meta property="og:type" content="website">
@@ -19,197 +19,192 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Brett Gifford – Creator / Director / Builder">
+<meta name="twitter:title" content="Brett Gifford — Creator / Director / Builder">
 <meta name="twitter:description" content="Creative director and founder building modern visual systems, storytelling, and creative ops tools for ambitious teams.">
 <meta name="twitter:image" content="https://brettgifford.com/assets/BrettGifford-Social.png">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-  :root { --paper:#fffdfa; --ink:#000; --highlight:#ffeb3b; }
-  * { margin:0; padding:0; box-sizing:border-box; }
+:root { --paper:#fffdfa; --ink:#000; --highlight:#ffeb3b; }
+* { margin:0; padding:0; box-sizing:border-box; }
 
-  body {
-    font-family:"Courier New", monospace;
-    height:100vh;
-    width:100vw;
-    padding:24px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#e3e3e3;
-    overflow:hidden;
-    position:relative;
-  }
+body {
+  font-family:"Courier New", monospace;
+  height:100vh;
+  width:100vw;
+  padding:24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#e3e3e3;
+  overflow:hidden;
+}
 
-  #bgvideo {
-    position:fixed;
-    top:50%; left:50%;
-    min-width:100%; min-height:100%;
-    transform:translate(-50%, -50%) scale(1.1);
-    z-index:-1;
-    object-fit:cover;
-    opacity:0.25;
-    filter:blur(6px) contrast(1.15) saturate(1.1);
-  }
+#bgvideo {
+  position:fixed;
+  top:50%; left:50%;
+  min-width:100%; min-height:100%;
+  transform:translate(-50%, -50%) scale(1.1);
+  z-index:-1;
+  object-fit:cover;
+  opacity:0.25;
+  filter:blur(6px) contrast(1.15) saturate(1.1);
+}
 
-  .scale-wrapper {
-    transform: scale(1.5) rotate(-1.2deg);
-    transform-origin:center;
-  }
+.scale-wrapper {
+  transform: scale(1.5) rotate(-1.2deg);
+  transform-origin:center;
+}
 
-  @media (max-width: 600px) {
-    body { padding:12px; align-items:flex-start; }
-    .scale-wrapper { transform: scale(1) rotate(0deg); }
-  }
+@media (max-width:600px) {
+  body { padding:12px; align-items:flex-start; }
+  .scale-wrapper { transform: scale(1) rotate(0deg); }
+}
 
-  .receipt {
-    width:100%; max-width:420px;
-    background:var(--paper);
-    border:1px dashed var(--ink);
-    padding:22px; padding-top:48px;
-    box-shadow:0 20px 45px rgba(0,0,0,.35);
-    position:relative;
-  }
+.receipt {
+  width:100%;
+  max-width:420px;
+  background:var(--paper);
+  border:1px dashed var(--ink);
+  padding:22px;
+  padding-top:48px;
+  box-shadow:0 20px 45px rgba(0,0,0,.35);
+  position:relative;
+}
 
-  .torn-overlay {
-    position:absolute;
-    top:-38px; left:0;
-    width:100%; height:60px;
-    background:url('assets/dechirure.png') no-repeat top center;
-    background-size:100% auto;
-    pointer-events:none;
-    z-index:5;
-  }
+.torn-overlay {
+  position:absolute;
+  top:-38px;
+  left:0;
+  width:100%;
+  height:60px;
+  background:url('assets/dechirure.png') no-repeat top center;
+  background-size:100% auto;
+  pointer-events:none;
+}
 
-  .name {
-    text-align:center;
-    font-weight:700;
-    font-size:1.35rem;
-    text-transform:uppercase;
-    margin-bottom:8px;
-    letter-spacing:0.05em;
-  }
+.name {
+  text-align:center;
+  font-weight:700;
+  font-size:1.35rem;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  letter-spacing:.05em;
+}
 
-  .tags {
-    display:flex;
-    justify-content:center;
-    gap:6px;
-    margin-bottom:12px;
-  }
+.tags {
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  margin-bottom:12px;
+}
 
-  .tag {
-    background:#000;
-    color:#fff;
-    font-size:.62rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    padding:3px 8px;
-    transform:rotate(-1deg);
-  }
+.tag {
+  background:#000;
+  color:#fff;
+  font-size:.62rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  transform:rotate(-1deg);
+}
 
-  .highlight-block {
-    background:var(--highlight);
-    padding:0 4px;
-    display:inline-block;
-    transform:rotate(-1deg);
-  }
+.highlight-block {
+  background:var(--highlight);
+  padding:0 4px;
+  display:inline-block;
+  transform:rotate(-1deg);
+}
 
-  .divider { border-top:1px dashed #333; margin:12px 0; }
-  .line { font-size:.88rem; margin:8px 0; line-height:1.42; }
+.divider {
+  border-top:1px dashed #333;
+  margin:12px 0;
+}
 
-  .redacted {
-    background:#000;
-    color:#000;
-    padding:0 6px;
-    border-radius:2px;
-    position:relative;
-  }
-  .redacted::after {
-    content:"";
-    position:absolute;
-    left:2px; right:2px; top:50%;
-    height:1px;
-    background:#111;
-    opacity:.6;
-  }
+.line {
+  font-size:.88rem;
+  margin:8px 0;
+  line-height:1.42;
+}
 
-  .reel {
-    margin-top:10px;
-    text-transform:uppercase;
-    font-size:.78rem;
-  }
-  .reel span { float:right; }
+.reel {
+  margin-top:10px;
+  text-transform:uppercase;
+  font-size:.78rem;
+}
+.reel span { float:right; }
 
-  .meta {
-    margin-top:6px;
-    font-size:.7rem;
-    text-transform:uppercase;
-  }
-  .meta span { float:right; }
+.meta {
+  margin-top:6px;
+  font-size:.7rem;
+  text-transform:uppercase;
+}
+.meta span { float:right; }
 
-  .social-row {
-    margin-top:10px;
-    display:flex;
-    justify-content:center;
-    gap:10px;
-  }
-  .social-icon {
-    width:22px; height:22px;
-    border-radius:50%;
-    border:1px solid #000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:.65rem;
-    text-decoration:none;
-    color:#000;
-  }
+.social-row {
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
 
-  /* Logo marquee */
-  .logo-marquee {
-    margin-top:14px;
-    padding-top:8px;
-    border-top:1px dashed #333;
-    overflow:hidden;
-    white-space:nowrap;
-  }
+.social-icon {
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  border:1px solid #000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:.65rem;
+  text-decoration:none;
+  color:#000;
+}
 
-  .logo-marquee-label {
-    font-size:.65rem;
-    text-transform:uppercase;
-    letter-spacing:.15em;
-    margin-bottom:4px;
-    color:#555;
-  }
+.logo-marquee {
+  margin-top:14px;
+  padding-top:8px;
+  border-top:1px dashed #333;
+  overflow:hidden;
+  white-space:nowrap;
+}
 
-  .logo-track {
-    display:inline-flex;
-    gap:18px;
-    animation: marquee-scroll 22s linear infinite;
-  }
+.logo-marquee-label {
+  font-size:.65rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  margin-bottom:4px;
+  color:#555;
+}
 
-  .logo-pill {
-    border:1px solid #000;
-    border-radius:999px;
-    padding:4px 12px;
-    font-size:.7rem;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    background:#fffdfa;
-  }
+.logo-track {
+  display:inline-flex;
+  gap:18px;
+  animation: marquee-scroll 22s linear infinite;
+}
 
-  @keyframes marquee-scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
+.logo-pill {
+  border:1px solid #000;
+  border-radius:999px;
+  padding:4px 12px;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  background:#fffdfa;
+}
 
-  a {
-    color:#000;
-    border-bottom:1px dotted #444;
-    text-decoration:none;
-  }
-  a:hover { border-bottom-style:solid; }
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+a {
+  color:#000;
+  border-bottom:1px dotted #444;
+  text-decoration:none;
+}
+a:hover { border-bottom-style:solid; }
 </style>
 </head>
 
@@ -220,85 +215,87 @@
 </video>
 
 <div class="scale-wrapper">
-  <div class="receipt">
+<div class="receipt">
 
-    <div class="torn-overlay"></div>
+  <div class="torn-overlay"></div>
 
-    <div class="name">
-      <span class="highlight-block">Brett&nbsp;Gifford</span>
-    </div>
-
-    <div class="tags">
-      <span class="tag">Creator</span>
-      <span class="tag">Director</span>
-      <span class="tag">Builder</span>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="line">
-      Built creative at teams later acquired by
-      <span class="highlight-block"><a href="https://www.optimizely.com" target="_blank">Optimizely</a></span> (via Zaius)
-      and <span class="highlight-block"><a href="https://www.paddle.com" target="_blank">Paddle</a></span> 🦄 (via ProfitWell),
-      shaping video-driven creative systems and direction.
-    </div>
-
-    <div class="line">
-      Founder of <span class="highlight-block"><a href="https://intakely.app" target="_blank">Intakely</a></span>.
-      Former instructor at <span class="highlight-block"><a href="https://www.snhu.edu" target="_blank">SNHU</a></span>.
-      <img src="https://news.ycombinator.com/y18.svg" style="width:14px;height:14px;vertical-align:middle;margin:0 2px;"> applicant.
-      Currently focused on raising my newborn, ❤️ Maya Gifford, and thinking of the future of creative systems.
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="reel">
-      Showreel 🎥
-      <span>
-        <a href="https://www.behance.net/BrettGifford/" target="_blank">Portfolio</a>
-      </span>
-    </div>
-
-    <div class="meta">
-      Contact <span><a href="mailto:brettmgifford@gmail.com">brettmgifford@gmail.com</a></span>
-    </div>
-
-    <div class="meta">
-      Video <span><a href="https://www.youtube.com/@brett.gifford" target="_blank">YouTube</a></span>
-    </div>
-
-    <div class="social-row">
-      <a class="social-icon" href="https://www.linkedin.com/in/brettmgifford/" target="_blank">in</a>
-      <a class="social-icon" href="https://www.youtube.com/@brett.gifford" target="_blank">▶</a>
-      <a class="social-icon" href="https://www.behance.net/BrettGifford/" target="_blank">Be</a>
-      <a class="social-icon" href="https://www.instagram.com/bgiff1010/" target="_blank">♡</a>
-      <a class="social-icon" href="https://www.facebook.com/brett.gifford.75" target="_blank">f</a>
-      <a class="social-icon" href="mailto:brettmgifford@gmail.com">@</a>
-    </div>
-
-    <!-- Logo marquee -->
-    <div class="logo-marquee">
-      <div class="logo-marquee-label">Brands I've worked with</div>
-      <div class="logo-track">
-        <div class="logo-pill">Paddle</div>
-        <div class="logo-pill">ProfitWell</div>
-        <div class="logo-pill">Philips</div>
-        <div class="logo-pill">Comcast</div>
-        <div class="logo-pill">Zaius</div>
-        <div class="logo-pill">Appcues</div>
-        <div class="logo-pill">SNHU</div>
-
-        <div class="logo-pill">Paddle</div>
-        <div class="logo-pill">ProfitWell</div>
-        <div class="logo-pill">Philips</div>
-        <div class="logo-pill">Comcast</div>
-        <div class="logo-pill">Zaius</div>
-        <div class="logo-pill">Appcues</div>
-        <div class="logo-pill">SNHU</div>
-      </div>
-    </div>
-
+  <div class="name">
+    <span class="highlight-block">Brett&nbsp;Gifford</span>
   </div>
+
+  <div class="tags">
+    <span class="tag">Creator</span>
+    <span class="tag">Director</span>
+    <span class="tag">Builder</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="line">
+    Built creative at teams later acquired by
+    <span class="highlight-block"><a href="https://www.optimizely.com" target="_blank">Optimizely</a></span> (via Zaius)
+    and <span class="highlight-block"><a href="https://www.paddle.com" target="_blank">Paddle</a></span> 🦄 (via ProfitWell),
+    shaping video-driven creative systems and direction.
+  </div>
+
+  <div class="line">
+    Art Director for fast-moving brands.
+    Founder of <span class="highlight-block"><a href="https://intakely.app" target="_blank">Intakely.</a></span>
+    Former instructor at <span class="highlight-block"><a href="https://www.snhu.edu" target="_blank">SNHU</a></span>.
+    <img src="https://news.ycombinator.com/y18.svg" style="width:14px;height:14px;vertical-align:middle;margin:0 2px;"> applicant.
+    Currently focused on raising my newborn, ❤️ Maya Gifford.
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reel">
+    Showreel 🎥
+    <span>
+      <a href="https://www.youtube.com/watch?v=0mzlRHD0Q8k" target="_blank">Watch</a>
+    </span>
+  </div>
+
+  <div class="meta">
+    Portfolio <span>
+      <a href="https://www.behance.net/BrettGifford/" target="_blank">Behance</a>
+    </span>
+  </div>
+
+  <div class="meta">
+    Contact <span><a href="mailto:brettmgifford@gmail.com">brettmgifford@gmail.com</a></span>
+  </div>
+
+  <div class="social-row">
+    <a class="social-icon" href="https://www.linkedin.com/in/brettmgifford/" target="_blank">in</a>
+    <a class="social-icon" href="https://www.youtube.com/@brett.gifford" target="_blank">▶</a>
+    <a class="social-icon" href="https://www.behance.net/BrettGifford/" target="_blank">Be</a>
+    <a class="social-icon" href="https://www.instagram.com/bgiff1010/" target="_blank">♡</a>
+    <a class="social-icon" href="https://www.facebook.com/brett.gifford.75" target="_blank">f</a>
+    <a class="social-icon" href="mailto:brettmgifford@gmail.com">@</a>
+  </div>
+
+  <div class="logo-marquee">
+    <div class="logo-marquee-label">Brands I've worked with</div>
+    <div class="logo-track">
+      <div class="logo-pill">Paddle</div>
+      <div class="logo-pill">ProfitWell</div>
+      <div class="logo-pill">Philips</div>
+      <div class="logo-pill">Comcast</div>
+      <div class="logo-pill">Zaius</div>
+      <div class="logo-pill">Appcues</div>
+      <div class="logo-pill">SNHU</div>
+
+      <div class="logo-pill">Paddle</div>
+      <div class="logo-pill">ProfitWell</div>
+      <div class="logo-pill">Philips</div>
+      <div class="logo-pill">Comcast</div>
+      <div class="logo-pill">Zaius</div>
+      <div class="logo-pill">Appcues</div>
+      <div class="logo-pill">SNHU</div>
+    </div>
+  </div>
+
+</div>
 </div>
 
 </body>
