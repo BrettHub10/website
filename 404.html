@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>404, Item Not Found | Brett Gifford</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Absolute paths: this page is served for any missing URL, at any depth -->
+<link rel="icon" type="image/png" href="/assets/B-favicon.png">
+
+<style>
+:root { --paper:#fffdfa; --ink:#000; --highlight:#ffeb3b; }
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family:"Courier New", monospace;
+  min-height:100vh;
+  min-height:100dvh;
+  padding:24px;
+  display:flex;
+  background:#e3e3e3;
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+.scale-wrapper {
+  width:100%;
+  max-width:420px;
+  margin:auto;
+  padding-top:38px;
+  zoom:var(--fit, 1);
+  transform:rotate(-1.2deg);
+}
+
+.receipt {
+  background:var(--paper);
+  border:1px dashed var(--ink);
+  padding:22px;
+  padding-top:48px;
+  box-shadow:0 20px 45px rgba(0,0,0,.35);
+  position:relative;
+}
+
+.torn-overlay {
+  position:absolute;
+  top:-38px;
+  left:0;
+  width:100%;
+  height:60px;
+  background:url('/assets/dechirure.png') no-repeat top center;
+  background-size:100% auto;
+  pointer-events:none;
+}
+
+.name {
+  text-align:center;
+  font-weight:700;
+  font-size:1.35rem;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  letter-spacing:.05em;
+}
+.name a { border-bottom:none; }
+
+.tags { display:flex; justify-content:center; gap:6px; margin-bottom:12px; }
+.tag {
+  background:#000;
+  color:#fff;
+  font-size:.62rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  transform:rotate(-1deg);
+}
+
+.highlight-block {
+  background:var(--highlight);
+  padding:0 4px;
+  display:inline-block;
+  transform:rotate(-1deg);
+}
+
+.divider { border-top:1px dashed #333; margin:14px 0; }
+
+h1 {
+  font-size:1.5rem;
+  line-height:1.2;
+  text-transform:uppercase;
+  margin:4px 0 10px;
+}
+
+.line { font-size:.88rem; line-height:1.5; margin:8px 0; }
+
+.label {
+  font-size:.65rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  margin-bottom:6px;
+  color:#555;
+}
+
+.items { list-style:none; }
+.items li {
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  font-size:.78rem;
+  text-transform:uppercase;
+  margin:7px 0;
+}
+.items li::after {
+  content:"";
+  flex:1;
+  order:1;
+  min-width:16px;
+  border-bottom:1px dotted #444;
+  transform:translateY(-3px);
+}
+.items li b { order:2; font-size:.9rem; }
+.items li b.path {
+  text-transform:none;
+  font-weight:400;
+  max-width:60%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.total {
+  border-top:1px solid #000;
+  border-bottom:3px double #000;
+  margin-top:10px;
+  padding:8px 0;
+  font-size:.82rem;
+  text-transform:uppercase;
+  display:flex;
+  justify-content:space-between;
+  position:relative;
+}
+.total span { font-weight:700; }
+
+.void {
+  position:absolute;
+  right:96px;
+  top:-30px;
+  transform:rotate(-9deg);
+  border:3px solid #000;
+  padding:2px 12px;
+  font-size:1.5rem;
+  font-weight:700;
+  letter-spacing:.2em;
+  background:var(--highlight);
+}
+
+.meta {
+  margin-top:6px;
+  font-size:.7rem;
+  text-transform:uppercase;
+  overflow:hidden;
+}
+.meta span { float:right; text-transform:none; }
+
+.barcode {
+  height:38px;
+  margin:20px auto 8px;
+  max-width:220px;
+  background:repeating-linear-gradient(90deg,
+    #000 0 2px, transparent 2px 5px, #000 5px 6px, transparent 6px 10px,
+    #000 10px 13px, transparent 13px 15px, #000 15px 16px, transparent 16px 21px);
+}
+.thanks {
+  text-align:center;
+  font-size:.62rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:#555;
+}
+
+a { color:#000; border-bottom:1px dotted #444; text-decoration:none; }
+a:hover { border-bottom-style:solid; }
+
+@media (max-width:600px) {
+  body { padding:12px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="scale-wrapper">
+<main class="receipt">
+
+  <div class="torn-overlay"></div>
+
+  <div class="name">
+    <a href="/"><span class="highlight-block">Brett&nbsp;Gifford</span></a>
+  </div>
+
+  <div class="tags">
+    <span class="tag">Error</span>
+    <span class="tag">404</span>
+    <span class="tag">No Sale</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <h1>Item not found.</h1>
+
+  <p class="line">
+    That page is not on the receipt. It may have moved, or it never rang up in the first place.
+  </p>
+
+  <div class="divider"></div>
+
+  <p class="label">Transaction</p>
+  <ul class="items">
+    <li>Requested <b class="path" id="path">this page</b></li>
+    <li>Pages found <b>0</b></li>
+  </ul>
+  <div class="total">
+    <div class="void" aria-hidden="true">VOID</div>
+    Total due <span>$0.00</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <p class="label">In stock</p>
+  <div class="meta">
+    Home <span><a href="/">brettgifford.com</a></span>
+  </div>
+  <div class="meta">
+    Brand Systems <span><a href="/brand-systems/">How I work</a></span>
+  </div>
+  <div class="meta">
+    Writing <span><a href="/writing/">Articles</a></span>
+  </div>
+  <div class="meta">
+    Contact <span><a href="mailto:brettmgifford@gmail.com">brettmgifford@gmail.com</a></span>
+  </div>
+
+  <div class="barcode" aria-hidden="true"></div>
+  <p class="thanks">No charge. Keep this receipt anyway.</p>
+
+</main>
+</div>
+
+<script>
+// Print the missing address on the receipt. textContent keeps it inert.
+document.getElementById('path').textContent = location.pathname;
+
+// Same fit-to-screen sizing as the home page receipt.
+(function () {
+  var wrap = document.querySelector('.scale-wrapper');
+  function fit() {
+    wrap.style.setProperty('--fit', 1);
+    var pad = (innerWidth <= 600 ? 12 : 24) * 2 + 16;
+    var byWidth = (innerWidth - pad) / wrap.offsetWidth;
+    var byHeight = (innerHeight - pad) / wrap.offsetHeight;
+    var s = Math.min(1.5, byWidth, byHeight);
+    s = Math.max(s, Math.min(1, byWidth));
+    wrap.style.setProperty('--fit', s.toFixed(3));
+  }
+  fit();
+  addEventListener('resize', fit);
+})();
+</script>
+
+</body>
+</html>

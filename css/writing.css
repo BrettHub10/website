@@ -1,0 +1,228 @@
+/* Receipt styles for /writing/ and its articles. Mirrors the home page primitives. */
+:root { --paper:#fffdfa; --ink:#000; --highlight:#ffeb3b; }
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family:"Courier New", monospace;
+  padding:72px 24px 96px;
+  display:flex;
+  justify-content:center;
+  background:#e3e3e3;
+  color:var(--ink);
+}
+
+.receipt {
+  width:100%;
+  max-width:680px;
+  background:var(--paper);
+  border:1px dashed var(--ink);
+  padding:34px;
+  padding-top:64px;
+  box-shadow:0 20px 45px rgba(0,0,0,.35);
+  position:relative;
+}
+
+.torn-overlay {
+  position:absolute;
+  top:-62px;
+  left:0;
+  width:100%;
+  height:98px;
+  background:url('../assets/dechirure.png') no-repeat top center;
+  background-size:100% auto;
+  pointer-events:none;
+}
+
+.name {
+  text-align:center;
+  font-weight:700;
+  font-size:1.35rem;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  letter-spacing:.05em;
+}
+.name a { border-bottom:none; }
+
+.tags {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:12px;
+}
+
+.tag {
+  background:#000;
+  color:#fff;
+  font-size:.62rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  transform:rotate(-1deg);
+}
+
+.highlight-block {
+  background:var(--highlight);
+  padding:0 4px;
+  display:inline-block;
+  transform:rotate(-1deg);
+}
+
+.divider {
+  border-top:1px dashed #333;
+  margin:26px 0 18px;
+}
+
+.label {
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  margin-bottom:12px;
+  color:#555;
+}
+.label a { color:#555; }
+
+h1 {
+  font-size:1.75rem;
+  line-height:1.2;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  margin:14px 0 16px;
+  text-wrap:balance;
+}
+
+.deck {
+  font-size:1rem;
+  line-height:1.55;
+  margin:0 0 18px;
+  color:#333;
+}
+
+/* Article body */
+article p { font-size:.95rem; line-height:1.7; margin:14px 0; }
+article .label { font-size:.68rem; line-height:1.4; margin:0 0 12px; }
+article .deck { font-size:1rem; line-height:1.55; margin:0 0 18px; }
+
+article h2 {
+  font-size:1.02rem;
+  line-height:1.35;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin:34px 0 4px;
+  padding-top:18px;
+  border-top:1px dashed #333;
+}
+article h3 {
+  font-size:.95rem;
+  line-height:1.4;
+  margin:24px 0 2px;
+}
+
+article ul { list-style:none; margin:14px 0; }
+article li {
+  font-size:.95rem;
+  line-height:1.65;
+  margin:8px 0;
+  padding-left:22px;
+  position:relative;
+}
+article li::before { content:"+"; position:absolute; left:2px; color:#555; }
+
+figure { margin:18px 0 22px; }
+figure img {
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px dashed #333;
+}
+figcaption {
+  font-size:.66rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:#555;
+  margin-top:6px;
+  line-height:1.5;
+}
+figcaption a { color:#555; }
+
+.video {
+  position:relative;
+  aspect-ratio:16 / 9;
+  margin:22px 0;
+  border:1px dashed #333;
+  background:#000;
+}
+.video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+/* Writing index rows */
+.row {
+  display:grid;
+  grid-template-columns:84px 1fr;
+  column-gap:14px;
+  padding:14px 0;
+  border-bottom:1px dotted #444;
+}
+.row:last-of-type { border-bottom:none; }
+.row-date {
+  grid-row:1 / span 2;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:#555;
+  padding-top:3px;
+}
+.row-title {
+  font-size:.98rem;
+  font-weight:700;
+  text-transform:uppercase;
+  line-height:1.35;
+}
+.row-desc {
+  font-size:.84rem;
+  line-height:1.55;
+  color:#333;
+  margin-top:4px;
+}
+.row:hover .row-title { background:var(--highlight); }
+
+.meta {
+  margin-top:8px;
+  font-size:.74rem;
+  text-transform:uppercase;
+  overflow:hidden;
+}
+.meta span { float:right; text-transform:none; }
+
+.barcode {
+  height:44px;
+  margin:28px auto 8px;
+  max-width:260px;
+  background:repeating-linear-gradient(90deg,
+    #000 0 2px, transparent 2px 5px, #000 5px 6px, transparent 6px 10px,
+    #000 10px 13px, transparent 13px 15px, #000 15px 16px, transparent 16px 21px);
+}
+.thanks {
+  text-align:center;
+  font-size:.66rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:#555;
+}
+
+a {
+  color:#000;
+  border-bottom:1px dotted #444;
+  text-decoration:none;
+}
+a:hover { border-bottom-style:solid; }
+a.row, a.row:hover { border-bottom:1px dotted #444; }
+a.row:last-of-type { border-bottom:none; }
+
+@media (max-width:600px) {
+  body { padding:44px 12px 48px; }
+  .receipt { padding:22px; padding-top:48px; }
+  .torn-overlay { top:-40px; height:64px; }
+  h1 { font-size:1.3rem; }
+  .row { grid-template-columns:1fr; }
+  .row-date { grid-row:auto; margin-bottom:4px; }
+}

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brett Gifford | Creative Director &amp; Design Engineer, AI Brand Systems</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="../assets/B-favicon.png">
+
+<!-- SEO -->
+<meta name="description" content="Brett Gifford is a creative director and design engineer who builds brand design systems that run on AI: one source for the site, campaigns, and production, with the creative kept human.">
+<link rel="canonical" href="https://brettgifford.com/brand-systems/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="I design the system a brand runs on. | Brett Gifford">
+<meta property="og:description" content="Creative director and design engineer building brand design systems that run on AI. One creative lead, the output of a full team.">
+<meta property="og:image" content="https://brettgifford.com/assets/BrettGifford-Social.png">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://brettgifford.com/brand-systems/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="I design the system a brand runs on. | Brett Gifford">
+<meta name="twitter:description" content="Creative director and design engineer building brand design systems that run on AI. One creative lead, the output of a full team.">
+<meta name="twitter:image" content="https://brettgifford.com/assets/BrettGifford-Social.png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://brettgifford.com/brand-systems/",
+  "name": "Brett Gifford | Creative Director & Design Engineer, AI Brand Systems",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Brett Gifford",
+    "url": "https://brettgifford.com",
+    "image": "https://brettgifford.com/assets/BrettGifford-Social.png",
+    "jobTitle": ["Creative Director", "Design Engineer", "Brand & Creative Lead"],
+    "description": "Creative director and design engineer who builds brand design systems that run on AI.",
+    "worksFor": { "@type": "Organization", "name": "Cloud Capital", "url": "https://cloudcapital.co" },
+    "knowsAbout": [
+      "Creative direction",
+      "Brand design systems",
+      "Design engineering",
+      "AI design systems",
+      "Brand systems",
+      "Creative operations",
+      "Motion design",
+      "Webflow",
+      "AI search visibility"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/brettmgifford/",
+      "https://medium.com/@brettmgifford",
+      "https://www.behance.net/BrettGifford/",
+      "https://www.youtube.com/@brett.gifford"
+    ]
+  }
+}
+</script>
+
+<style>
+:root { --paper:#fffdfa; --ink:#000; --highlight:#ffeb3b; }
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family:"Courier New", monospace;
+  padding:72px 24px 96px;
+  display:flex;
+  justify-content:center;
+  background:#e3e3e3;
+  color:var(--ink);
+}
+
+.receipt {
+  width:100%;
+  max-width:640px;
+  background:var(--paper);
+  border:1px dashed var(--ink);
+  padding:34px;
+  padding-top:64px;
+  box-shadow:0 20px 45px rgba(0,0,0,.35);
+  position:relative;
+}
+
+.torn-overlay {
+  position:absolute;
+  top:-58px;
+  left:0;
+  width:100%;
+  height:92px;
+  background:url('../assets/dechirure.png') no-repeat top center;
+  background-size:100% auto;
+  pointer-events:none;
+}
+
+.name {
+  text-align:center;
+  font-weight:700;
+  font-size:1.35rem;
+  text-transform:uppercase;
+  margin-bottom:8px;
+  letter-spacing:.05em;
+}
+.name a { border-bottom:none; }
+
+.tags {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:12px;
+}
+
+.tag {
+  background:#000;
+  color:#fff;
+  font-size:.62rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  transform:rotate(-1deg);
+}
+
+.highlight-block {
+  background:var(--highlight);
+  padding:0 4px;
+  display:inline-block;
+  transform:rotate(-1deg);
+}
+
+.divider {
+  border-top:1px dashed #333;
+  margin:26px 0 18px;
+}
+
+h1 {
+  font-size:1.9rem;
+  line-height:1.18;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  margin:22px 0 16px;
+  text-wrap:balance;
+}
+
+.label {
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  margin-bottom:12px;
+  color:#555;
+  font-weight:400;
+}
+
+.line {
+  font-size:.95rem;
+  margin:12px 0;
+  line-height:1.6;
+}
+
+/* Itemized rows: name, dotted leader, value */
+.items { list-style:none; }
+.items li {
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  font-size:.86rem;
+  text-transform:uppercase;
+  margin:9px 0;
+  line-height:1.35;
+}
+.items li::after {
+  content:"";
+  flex:1;
+  order:1;
+  min-width:16px;
+  border-bottom:1px dotted #444;
+  transform:translateY(-3px);
+}
+.items li b { order:2; font-size:1rem; }
+
+.total {
+  border-top:1px solid #000;
+  border-bottom:3px double #000;
+  margin-top:14px;
+  padding:10px 0;
+  font-size:.9rem;
+  line-height:1.5;
+}
+.total strong { text-transform:uppercase; letter-spacing:.08em; }
+
+/* Numbered entries */
+.entry {
+  display:grid;
+  grid-template-columns:34px 1fr;
+  margin:18px 0;
+}
+.entry .no { font-size:.8rem; padding-top:2px; color:#555; }
+.entry h3 {
+  font-size:.95rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-bottom:4px;
+}
+.entry p { font-size:.92rem; line-height:1.6; }
+
+figure { margin:22px 0; }
+figure img {
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px dashed #333;
+}
+figcaption {
+  font-size:.66rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:#555;
+  margin-top:6px;
+  line-height:1.5;
+}
+
+.punch {
+  text-align:center;
+  font-weight:700;
+  font-size:1.05rem;
+  line-height:1.9;
+  margin:22px 0 6px;
+}
+
+.meta {
+  margin-top:8px;
+  font-size:.74rem;
+  text-transform:uppercase;
+  overflow:hidden;
+}
+.meta span { float:right; text-transform:none; }
+
+.logo-row {
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.logo-pill {
+  border:1px solid #000;
+  border-radius:999px;
+  padding:4px 12px;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  background:#fffdfa;
+}
+
+.barcode {
+  height:44px;
+  margin:28px auto 8px;
+  max-width:260px;
+  background:repeating-linear-gradient(90deg,
+    #000 0 2px, transparent 2px 5px, #000 5px 6px, transparent 6px 10px,
+    #000 10px 13px, transparent 13px 15px, #000 15px 16px, transparent 16px 21px);
+}
+.thanks {
+  text-align:center;
+  font-size:.66rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:#555;
+}
+
+a {
+  color:#000;
+  border-bottom:1px dotted #444;
+  text-decoration:none;
+}
+a:hover { border-bottom-style:solid; }
+
+@media (max-width:600px) {
+  body { padding:44px 12px 48px; }
+  .receipt { padding:22px; padding-top:48px; }
+  .torn-overlay { top:-38px; height:60px; }
+  h1 { font-size:1.4rem; }
+  .entry { grid-template-columns:28px 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<main class="receipt">
+
+  <div class="torn-overlay"></div>
+
+  <div class="name">
+    <a href="../"><span class="highlight-block">Brett&nbsp;Gifford</span></a>
+  </div>
+
+  <div class="tags">
+    <span class="tag">Creative Director</span>
+    <span class="tag">Design Engineer</span>
+    <span class="tag">Producer</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <h1>I design the system a brand runs&nbsp;on.</h1>
+
+  <p class="line">
+    Most brands live in a PDF, or in one person's head, while the work happens somewhere else.
+    That gap is where good work gets diluted between the idea and the launch.
+  </p>
+  <p class="line">
+    I close it by building the brand as a working
+    <span class="highlight-block">design system</span>:
+    the rules, the reasoning, and the production tools in one place.
+    AI runs the system. It does not make the creative.
+  </p>
+
+  <div class="divider"></div>
+
+  <h2 class="label">Itemized: Cloud Capital, one year in</h2>
+  <ul class="items">
+    <li>Marketing site pages, designed in the system <b>37</b></li>
+    <li>Production tools: ads, social, decks, print <b>30</b></li>
+    <li>Brand team headcount <b>1</b></li>
+    <li>Agencies hired <b>0</b></li>
+    <li>AI-generated images <b>0</b></li>
+  </ul>
+  <p class="total">
+    <strong>Total:</strong> one creative lead, owning brand infrastructure that used to take a team.
+  </p>
+
+  <p class="line">
+    The screens on this page show a white-label version of the same system, loaded with two public brands,
+    Linear and Mailchimp. They are demos I built on my own from each company's published brand guidelines.
+    <span class="highlight-block">I am not affiliated with either company, and neither is a client.</span>
+  </p>
+
+  <figure>
+    <img src="../assets/system-demo-linear-overview.webp" width="1400" height="875" alt="Design system overview loaded with Linear's public brand: logo, color palette, and type pairing on a dark canvas">
+    <figcaption>Demo: the system loaded with Linear's public brand. Palette, logo, and type in one place.</figcaption>
+  </figure>
+
+  <div class="divider"></div>
+
+  <h2 class="label">What I build</h2>
+
+  <div class="entry">
+    <div class="no">01</div>
+    <div>
+      <h3>One source for the whole brand</h3>
+      <p>The site, the ad set running that week, the deck for a customer call, the newsletter. All of it draws from the same source, so a change lands once and turns up everywhere it belongs.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="no">02</div>
+    <div>
+      <h3>Taste, written down</h3>
+      <p>How headlines should sound. What each color means. Which layouts are approved for which formats, and why. Judgment recorded with its reasoning, so people and AI tools both inherit it.</p>
+    </div>
+  </div>
+
+  <figure>
+    <img src="../assets/system-demo-linear-voice.webp" width="1400" height="875" loading="lazy" alt="Voice and copy page for the Linear demo: a voice profile table covering archetype, sentence structure, formality, and what to avoid">
+    <figcaption>Demo: a voice profile, written down with its sources.</figcaption>
+  </figure>
+
+  <div class="entry">
+    <div class="no">03</div>
+    <div>
+      <h3>Production studios</h3>
+      <p>Approved layouts for every format a campaign needs. Copy and imagery go in. Ads, carousels, decks, and print-ready PDFs come out. The words, images, and layouts stay human.</p>
+    </div>
+  </div>
+
+  <figure>
+    <img src="../assets/system-demo-mailchimp-studio.webp" width="1400" height="875" loading="lazy" alt="Image studio loaded with Mailchimp's public brand, producing square and portrait social graphics on a yellow field with safe-zone guides">
+    <figcaption>Demo: the same studio on Mailchimp's brand. Approved surfaces and layouts, exported per format.</figcaption>
+  </figure>
+
+  <div class="entry">
+    <div class="no">04</div>
+    <div>
+      <h3>Design to live site</h3>
+      <p>The system builds new pages into Webflow and stages them for review, then watches the published site and flags drift. Nothing goes live without approval. The labor comes off the plate. The decision stays on it.</p>
+    </div>
+  </div>
+
+  <figure>
+    <img src="../assets/system-demo-linear-audit.webp" width="1400" height="682" loading="lazy" alt="Site audit page for the Linear demo listing the brand values detected on the live website">
+    <figcaption>Demo: an audit of a live site against the brand values in the system.</figcaption>
+  </figure>
+
+  <div class="entry">
+    <div class="no">05</div>
+    <div>
+      <h3>On-brand work, company-wide</h3>
+      <p>A brand pack written for AI, so a colleague can make a one-pager or a slide that looks like it came from the brand team. Nobody waits on the designer.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="no">06</div>
+    <div>
+      <h3>Found by AI</h3>
+      <p>Buyers now ask an AI model about a category instead of searching. I set the site up for AI crawlers and track how the brand gets described. Brand has two audiences now. Only one of them has eyes.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2 class="label">What a company gets</h2>
+
+  <p class="line">
+    <span class="highlight-block">Production stops setting the ceiling.</span>
+    One research campaign needed a landing page, a web PDF, a print edition, paid ads, carousels, and video thumbnails.
+    It shipped from one person, no agency. When a stat changed, it was updated once and every format followed.
+  </p>
+  <p class="line">
+    <span class="highlight-block">The brand stops drifting.</span>
+    Brands drift because the rules and the work sit in different places, and somebody is always in a hurry.
+    Put the rules where the work happens and drift becomes a list, not a feeling.
+  </p>
+  <p class="line">
+    <span class="highlight-block">The brand team stops being the bottleneck.</span>
+    Less of the week goes to being the person everyone waits on.
+    More goes to writing the rules well enough that nobody has to wait.
+  </p>
+  <p class="line">
+    <span class="highlight-block">The judgment outlasts the meeting.</span>
+    Rules that come without reasons get bent the first time they are inconvenient.
+    Here the reasons travel with the rules.
+  </p>
+
+  <div class="divider"></div>
+
+  <h2 class="label">What to call it</h2>
+
+  <p class="line">
+    Nobody has settled on a name for this work yet.
+    Design engineer gets at the building.
+    Design systems architect gets at the scope.
+    Creative director gets at the judgment.
+    Producer gets at the making.
+  </p>
+  <p class="line">
+    <span class="highlight-block">The making comes first.</span>
+    I am a creative producer at heart. Motion, video, brand identities, full campaigns:
+    fifteen years of making the work by hand, long before any of this existed.
+    The <a href="https://www.youtube.com/watch?v=0mzlRHD0Q8k" target="_blank" rel="noopener">showreel</a> is the receipt.
+  </p>
+  <p class="line">
+    That foundation is the whole point. You cannot write down what good looks like
+    until you have made enough of it to know. A system like this is only as good
+    as the taste it was built from.
+  </p>
+  <p class="line">
+    My definition: the person who designs the system a brand runs on, and keeps it connected to every place the brand shows up.
+  </p>
+
+  <p class="punch">
+    <span class="highlight-block">I make the creative.</span><br>
+    <span class="highlight-block">AI runs the system that keeps it ours.</span>
+  </p>
+
+  <div class="divider"></div>
+
+  <h2 class="label">Background</h2>
+
+  <p class="line">
+    Fifteen years across motion design, brand systems, and creative ops.
+    Built creative at teams later acquired by
+    <a href="https://www.optimizely.com" target="_blank" rel="noopener">Optimizely</a> (via Zaius) and
+    <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a> (via ProfitWell).
+    Former instructor at <a href="https://www.snhu.edu" target="_blank" rel="noopener">SNHU</a>.
+    Now leading Brand &amp; Creative at <a href="https://cloudcapital.co" target="_blank" rel="noopener">Cloud Capital</a>.
+  </p>
+
+  <div class="logo-row">
+    <div class="logo-pill">Paddle</div>
+    <div class="logo-pill">ProfitWell</div>
+    <div class="logo-pill">Philips</div>
+    <div class="logo-pill">Comcast</div>
+    <div class="logo-pill">Zaius</div>
+    <div class="logo-pill">Appcues</div>
+    <div class="logo-pill">SNHU</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="meta">
+    Contact <span><a href="mailto:brettmgifford@gmail.com">brettmgifford@gmail.com</a></span>
+  </div>
+  <div class="meta">
+    Writing <span><a href="../writing/">Articles</a></span>
+  </div>
+  <div class="meta">
+    Showreel <span><a href="https://www.youtube.com/watch?v=0mzlRHD0Q8k" target="_blank" rel="noopener">Watch</a></span>
+  </div>
+  <div class="meta">
+    LinkedIn <span><a href="https://www.linkedin.com/in/brettmgifford/" target="_blank" rel="noopener">brettmgifford</a></span>
+  </div>
+  <div class="meta">
+    Home <span><a href="../">brettgifford.com</a></span>
+  </div>
+
+  <div class="barcode" aria-hidden="true"></div>
+  <p class="thanks">Thank you. Keep this receipt.</p>
+  <p class="thanks" style="margin-top:14px; text-transform:none; letter-spacing:.02em; line-height:1.6;">Linear and Mailchimp are trademarks of their respective owners. The demo screens are independent concept work, not made for or endorsed by either company.</p>
+
+</main>
+
+</body>
+</html>

@@ -31,14 +31,12 @@
 
 body {
   font-family:"Courier New", monospace;
-  height:100vh;
-  width:100vw;
+  min-height:100vh;
+  min-height:100dvh;
   padding:24px;
   display:flex;
-  justify-content:center;
-  align-items:center;
   background:#e3e3e3;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
 #bgvideo {
@@ -52,14 +50,23 @@ body {
   filter:blur(6px) contrast(1.15) saturate(1.1);
 }
 
+/* --fit is set by the script at the end of the page: the receipt grows to
+   1.5x on big screens and shrinks to fit shorter ones. margin:auto centers
+   it when there is room and lets the page scroll when there is not. */
 .scale-wrapper {
-  transform: scale(1.5) rotate(-1.2deg);
+  width:100%;
+  max-width:420px;
+  margin:auto;
+  padding-top:38px;
+  zoom:var(--fit, 1);
+  transform:rotate(-1.2deg);
   transform-origin:center;
 }
 
 @media (max-width:600px) {
-  body { padding:12px; align-items:flex-start; }
-  .scale-wrapper { transform: scale(1) rotate(0deg); }
+  body { padding:12px; }
+  .social-row { gap:12px; }
+  .social-icon { width:30px; height:30px; font-size:.75rem; }
 }
 
 .receipt {
@@ -211,7 +218,7 @@ a:hover { border-bottom-style:solid; }
 <body>
 
 <video id="bgvideo" autoplay muted loop playsinline>
-  <source src="assets/Brett Gifford Showreel 2025.mp4" type="video/mp4">
+  <source src="assets/showreel-bg.mp4" type="video/mp4">
 </video>
 
 <div class="scale-wrapper">
@@ -252,6 +259,18 @@ a:hover { border-bottom-style:solid; }
     Showreel 🎥
     <span>
       <a href="https://www.youtube.com/watch?v=0mzlRHD0Q8k" target="_blank">Watch</a>
+    </span>
+  </div>
+
+  <div class="meta">
+    Brand Systems <span>
+      <a href="brand-systems/">How I work</a>
+    </span>
+  </div>
+
+  <div class="meta">
+    Writing <span>
+      <a href="writing/">Articles</a>
     </span>
   </div>
 
@@ -297,6 +316,23 @@ a:hover { border-bottom-style:solid; }
 
 </div>
 </div>
+
+<script>
+(function () {
+  var wrap = document.querySelector('.scale-wrapper');
+  function fit() {
+    wrap.style.setProperty('--fit', 1);
+    var pad = (innerWidth <= 600 ? 12 : 24) * 2 + 16; // body padding + room for the tilt
+    var byWidth = (innerWidth - pad) / wrap.offsetWidth;
+    var byHeight = (innerHeight - pad) / wrap.offsetHeight;
+    var s = Math.min(1.5, byWidth, byHeight);
+    s = Math.max(s, Math.min(1, byWidth)); // never shrink text below normal size; scroll instead
+    wrap.style.setProperty('--fit', s.toFixed(3));
+  }
+  fit();
+  addEventListener('resize', fit);
+})();
+</script>
 
 </body>
 </html>
