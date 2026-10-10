@@ -1,0 +1,31 @@
+# Brett Gifford
+
+> Brett Gifford is a creative director, design engineer, and producer in the Greater Boston area. He is Brand & Creative Lead at Cloud Capital, where he built the brand as a working design system: one source that runs the marketing site, campaigns, and production, with AI running the system and the creative kept human.
+
+Brett has worked in motion design, brand systems, and creative operations since 2008. He was Art Director, Video Production at Paddle (2022 to 2025), Sr. Creative Producer at ProfitWell (2020 to 2022, acquired by Paddle), and Creative Lead at Zaius (2018 to 2020, later acquired by Optimizely). He has taught motion graphics as an adjunct professor at Southern New Hampshire University.
+
+His position on AI in creative work: he does not use AI to generate images or video. He uses it to run brand infrastructure, meaning design systems, production tooling, site sync, and auditing. In his words, "I make the creative. AI runs the system that keeps it ours."
+
+His own definition of the role: the person who designs the system a brand runs on, and keeps it connected to every place the brand shows up.
+
+## Pages
+
+- [Home](https://brettgifford.com/): Short profile and links.
+- [About](https://brettgifford.com/about/): Full career history, range, awards, and education.
+- [Brand systems](https://brettgifford.com/brand-systems/): How he builds AI-run brand design systems and what a company gets from one.
+- [Showreel](https://brettgifford.com/showreel/): 2025 showreel of live action, 3D animation, motion graphics, and brand work.
+
+## Writing
+
+- [Building Intakely, an Intelligence Layer for Creative Teams](https://brettgifford.com/writing/building-intakely/): Why creative projects fail at the brief, and the product he built to fix it.
+- [Why Google's Gemini Ad Works (and Why It Feels So Familiar)](https://brettgifford.com/writing/why-googles-gemini-ad-works/): How the Gemini ad reuses the emotional playbook of Parisian Love.
+- [Why AI Can't Be a Feature (and Why Most Products Get This Wrong)](https://brettgifford.com/writing/why-ai-cant-be-a-feature/): The difference between AI bolted onto a product and a product designed around it.
+- [Creativity Is Not Broken. Our Workflows Are.](https://brettgifford.com/writing/creativity-is-not-broken/): The tools got faster, the process did not.
+
+## Contact
+
+- Email: brettmgifford@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/brettmgifford/)
+- [Medium](https://medium.com/@brettmgifford)
+- [YouTube](https://www.youtube.com/@brett.gifford)
+- [Behance](https://www.behance.net/BrettGifford/)

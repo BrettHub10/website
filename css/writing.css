@@ -185,6 +185,27 @@ figcaption a { color:#555; }
 }
 .row:hover .row-title { background:var(--highlight); }
 
+/* About page: employer, dotted leader, role, then a line of detail */
+.job { margin:16px 0; }
+.job-head {
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  font-size:.9rem;
+  text-transform:uppercase;
+}
+.job-head b { letter-spacing:.03em; }
+.job-head::after {
+  content:"";
+  flex:1;
+  order:1;
+  min-width:12px;
+  border-bottom:1px dotted #444;
+  transform:translateY(-3px);
+}
+.job-head span { order:2; font-size:.74rem; text-align:right; }
+.job p { font-size:.88rem; line-height:1.6; margin:4px 0 0; color:#333; }
+
 .meta {
   margin-top:8px;
   font-size:.74rem;
@@ -219,6 +240,9 @@ a.row, a.row:hover { border-bottom:1px dotted #444; }
 a.row:last-of-type { border-bottom:none; }
 
 @media (max-width:600px) {
+  .job-head { flex-wrap:wrap; }
+  .job-head::after { display:none; }
+  .job-head span { order:0; flex-basis:100%; text-align:left; color:#555; }
   body { padding:44px 12px 48px; }
   .receipt { padding:22px; padding-top:48px; }
   .torn-overlay { top:-40px; height:64px; }
