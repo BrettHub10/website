@@ -184,6 +184,18 @@ body {
 }
 .meta span { float:right; }
 
+/* Dotted leader between each label and its link, like a receipt line item */
+.reel, .meta { display:flex; align-items:baseline; gap:6px; }
+.reel span, .meta span { float:none; order:2; }
+.reel::after, .meta::after {
+  content:"";
+  order:1;
+  flex:1;
+  min-width:12px;
+  border-bottom:1px dotted #444;
+  transform:translateY(-3px);
+}
+
 .social-row {
   margin-top:10px;
   display:flex;
