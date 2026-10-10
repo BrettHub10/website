@@ -1,0 +1,33 @@
+# Old site addresses (2021 to 2025 Wix site and earlier) to their new homes.
+# Read by Cloudflare at deploy time. Format: old path, new path, status.
+
+# Old project pages
+/paddle                 /portfolio/paddle/                              301
+/portfolio/profitwell   /portfolio/boxed-out-profitwell/                301
+/profitwell             /portfolio/boxed-out-profitwell/                301
+/portfolio/zaius        /portfolio/zaius-brand-video-print-design/      301
+/zaius                  /portfolio/zaius-brand-video-print-design/      301
+/portfolio/appcues      /portfolio/appcues-mobile-app-promo/            301
+/appcues                /portfolio/appcues-mobile-app-promo/            301
+/comcast                /portfolio/comcast-business-select-branding/    301
+/comcast-business       /portfolio/comcast-business-select-branding/    301
+/philips                /portfolio/philips-thinkb4-campaign/            301
+/rcn                    /portfolio/rcn/                                 301
+/american-express       /portfolio/american-express-print-design/       301
+
+# Old section pages
+/work                   /portfolio/                                     301
+/brand                  /portfolio/                                     301
+/art                    /portfolio/                                     301
+/copy-of-art            /portfolio/                                     301
+/services               /brand-systems/                                 301
+/commissions            /about/                                         301
+/about-us               /about/                                         301
+/about.html             /about/                                         301
+/blog                   /writing/                                       301
+/feed                   /writing/                                       301
+
+# Old art shop
+/category/*             /portfolio/                                     301
+/product-page/*         /portfolio/                                     301
+/checkout-page          /                                               301
